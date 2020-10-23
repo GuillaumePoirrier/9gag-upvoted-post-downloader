@@ -34,5 +34,5 @@ while True:
                 print('Image sucessfully Downloaded: ', line, extensions[i])
                 found = True
     if(count % 10 == 0):
-        print(count, '/', totalAmount, '~', round(count/totalAmount), '%')
+        print(count, '/', totalAmount, '~', round((count/totalAmount)*100), '%')
 ids.close()
