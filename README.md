@@ -80,7 +80,7 @@ Then, we need to isolate a list of post id's :
 To do so, open git bash next to the downloaded file and execute with the correct filename (small tip: rename the file without spacesshould be better):
 
 ```
-sed '/href/!d' FILENAME.html | cut -c 47-53 > data.txt
+sed '/href/!d' FILENAME.html | cut -c 43-49 > data.txt
 ```
 
 The result will seem like :
