@@ -1,7 +1,7 @@
 # 9gag upvoted posts downloader
 
 This projects helps nostalgic 9gaggers retrieving and downloading old upvoted memes.
-
+Python 3.9
 
 
 ## Preparation
