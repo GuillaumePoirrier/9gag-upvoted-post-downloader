@@ -24,7 +24,7 @@ Delete all the lines **until** :
 ```
 <h3>Upvotes</h3>
 
-            <table>
+    <table>
     <tr>
         <th>Creation Time</th>
         <th>Link</th>
