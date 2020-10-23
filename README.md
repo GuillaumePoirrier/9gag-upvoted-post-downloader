@@ -64,12 +64,15 @@ The result shall be :
         <td><a href="https://9gag.com/gag/xxxxx" target="_blank">https://9gag.com/gag/xxxxx</a><td>
         <td>xxxxxxxxxxxxxxxxxxx</td>
     </tr>
-        <tr>
+    
+    ...
+    
+    <tr>
         <td>2020-10-23 xxxxxx</td>
         <td><a href="https://9gag.com/gag/xxxxx" target="_blank">https://9gag.com/gag/xxxxx</a>td>
         <td>xxxxxxxxxxxxxxxxxxx</td>
     </tr>
-    ...
+    
 ```
 
 Then, we need to isolate a list of post id's :
