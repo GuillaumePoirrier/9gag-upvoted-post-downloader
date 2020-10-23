@@ -13,7 +13,7 @@ for line in ids:
 ids.close()
 
 # Donloadind files
-ids = open('data.txt', 'r')
+ids = open(data_filename, 'r')
 count = 0
 while True:
     count += 1
@@ -33,6 +33,6 @@ while True:
                     shutil.copyfileobj(r.raw, f)
                 print('Image sucessfully Downloaded: ', line, extensions[i])
                 found = True
-    if(count % 2 == 0):
+    if(count % 10 == 0):
         print(count, '/', totalAmount, '~', round(count/totalAmount), '%')
 ids.close()
