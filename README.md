@@ -10,6 +10,15 @@ This projects helps nostalgic 9gaggers retrieving and downloading old upvoted me
 
 Be careful to put your project in a place where you have enough storage to store your posts.
 
+### Download your upvoted posts
+
+1. Open a Python cli
+2. run `pip install requests`
+3. run python3 downloader.py
+
+The posts that will be downloaded in /data directoryare the ones listed in data.txt. To download yours, go to next step
+
+
 ### Get Posts ids list
 
 According to GDPR, all websites detaining personal informaton about you can be asked to give the user's all the data they detain about them. Thus, we have first to ask 9gag the list of all the data they have about your profile. 
@@ -81,12 +90,8 @@ aO7DADE
 
 Finally, replace the project data.txt with the new one you just created.
 
-
-### Download your upvoted posts
-
 1. Open a Python cli
-2. run `pip install requests`
-3. run python3 main.py
-
+2. run `pip install requests` //if not done yet
+3. run python3 downloader.py
 
 That's all folks ! Your memes will be downloaded in /data directory
