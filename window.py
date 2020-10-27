@@ -43,7 +43,7 @@ def submit(button):
         outputPath+='/'
         runningMode()
         t0 = time.process_time()
-        #convertFileToIdsList(inputPath)
+        convertFileToIdsList(inputPath)
         app.thread(readIds, outputPath)
     else:
         app.errorBox('Input Data', 'Please input your html file and select the output directory', parent=None)
