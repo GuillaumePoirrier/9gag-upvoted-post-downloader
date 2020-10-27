@@ -1,8 +1,10 @@
 # 9gag upvoted posts downloader
 
+
 This projects helps nostalgic 9gaggers retrieving and downloading old upvoted memes.Written in Python 3.8.5
 
 ## Screenshots
+
 
 <img src="img/2020-10-27_12-30.png"/>
 <img src="img/2020-10-27_12-31.png"/>
@@ -22,11 +24,11 @@ pip3 install pyinstaller
 And then run 
 ```
 pyinstaller --onefile --windowed window.py
-
 ```
 And execute the file window in /dist
 
 or you can download the executable directly from Release 
+
 
 ### Get Posts ids list
 
@@ -48,3 +50,4 @@ Within minutes, you will receive a mail from 9gag. Download the file "You 9gag d
 That's all folks ! Your memes will be downloaded in the chosen directory. 
 **If you do not trust the file processing, feel free to remove the first part of the html file containing your pseudo and mail.** 
 I absolutly take any information from the users. Privacy first ! 
+
