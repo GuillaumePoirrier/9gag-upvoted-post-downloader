@@ -95,7 +95,7 @@ def downloadFiles(line, outputPath, count, totalCount):
                     found=True
                 if count == totalCount:
                     app.setStatusbar('[finished] Status : ['+str(count)+'/'+str(totalCount)+'] downloaded. elapsed time: '+ (str(datetime.timedelta(seconds=round(time.process_time()-t0)))), field=0)
-
+                    os.remove('data.txt')
             else:
                 app.setStatusbar('[Already found] Status : ['+str(count)+'/'+str(totalCount)+'] downloaded. Estimated '+ getEstimatedTime(count, totalCount), field=0)
 
