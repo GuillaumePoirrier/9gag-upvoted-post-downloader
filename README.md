@@ -1,22 +1,33 @@
 # 9gag upvoted posts downloader
 
-This projects helps nostalgic 9gaggers retrieving and downloading old upvoted memes.
-Python 3.9
+
+This projects helps nostalgic 9gaggers retrieving and downloading old upvoted memes.Written in Python 3.8.5
+
+## Screenshots
 
 
-## Preparation
+<img src="img/2020-10-27_12-30.png"/>
+<img src="img/2020-10-27_12-31.png"/>
+
+## Execution
 
 ### Download project
 
-Be careful to put your project in a place where you have enough storage to store your posts.
+You can either download the source and run
 
-### Download your upvoted posts
+```
+pip3 install requests
+pip3 install appjar
+pip3 install datetime
+pip3 install pyinstaller
+```
+And then run 
+```
+pyinstaller --onefile --windowed window.py
+```
+And execute the file window in /dist
 
-1. Open a Python cli
-2. run `pip install requests`
-3. run `python3 downloader.py`
-
-The posts that will be downloaded in /data directoryare the ones listed in data.txt. To download yours, go to next step
+or you can download the executable directly from Release 
 
 
 ### Get Posts ids list
@@ -26,75 +37,17 @@ According to GDPR, all websites detaining personal informaton about you can be a
  - Connect to your 9gag acount on your desktop.
  - Click on your profile picture > Settings >Privacy & Safety > Request my data.
 
-Within minutes, you will receive a mail from 9gag. Download the file "You 9gag data"
-
-Open the file with an editor ( Notepad ++ for instance)
-Delete all the lines **until** :
-```
-<h3>Upvotes</h3>
-
-    <table>
-    <tr>
-        <th>Creation Time</th>
-        <th>Link</th>
-        <th>Title</th>
-    </tr>
-```
-And after :
-
-```
-<h3>Downvotes</h3>
-```
+Within minutes, you will receive a mail from 9gag. Download the file "You 9gag data.html"
 
 
-The result shall be :
+### Download your upvoted posts
+
+1. Enter your html data file in the first input
+2. Enter your output directory
+3. Click Submit
 
 
-```
-<h3>Upvotes</h3>
+That's all folks ! Your memes will be downloaded in the chosen directory. 
+**If you do not trust the file processing, feel free to remove the first part of the html file containing your pseudo and mail.** 
+I absolutly take any information from the users. Privacy first ! 
 
-    <table>
-    <tr>
-        <th>Creation Time</th>
-        <th>Link</th>
-        <th>Title</th>
-    </tr>
-    <tr>
-        <td>2020-10-23xxxxxxx</td>
-        <td><a href="https://9gag.com/gag/xxxxx" target="_blank">https://9gag.com/gag/xxxxx</a><td>
-        <td>xxxxxxxxxxxxxxxxxxx</td>
-    </tr>
-    
-    ...
-    
-    <tr>
-        <td>2020-10-23 xxxxxx</td>
-        <td><a href="https://9gag.com/gag/xxxxx" target="_blank">https://9gag.com/gag/xxxxx</a>td>
-        <td>xxxxxxxxxxxxxxxxxxx</td>
-    </tr>
-    
-```
-
-Then, we need to isolate a list of post id's :
-
-To do so, open git bash next to the downloaded file and execute with the correct filename (small tip: rename the file without spacesshould be better):
-
-```
-sed '/href/!d' FILENAME.html | cut -c 43-49 > data.txt
-```
-
-The result will seem like :
-
-```
-abGVKAv
-aO7DADE
-...
-```
-
-Finally, replace the project data.txt with the new one you just created.
-
-1. Open a Python cli
-2. run `pip install requests` //if not done yet
-3. run python3 downloader.py
-
-That's all folks ! Your memes will be downloaded in /data directory
