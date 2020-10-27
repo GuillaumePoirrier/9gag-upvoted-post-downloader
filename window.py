@@ -40,9 +40,9 @@ def createWidgets():
 def submit(button):  
     inputPath , outputPath =  app.getEntry('inputPath'), app.getEntry('outputPath')
     if outputPath and inputPath != '':
+        outputPath+='/'
         runningMode()
         t0 = time.process_time()
-        print(t0)
         convertFileToIdsList(inputPath)
         app.thread(readIds, outputPath)
     else:
@@ -57,7 +57,7 @@ def runningMode():
 def readIds(outputPath):
     global running
     totalCount = countLines(generated_data_filename)
-    ids = open(generated_data_filename, 'r')
+    ids = open(generated_data_filename, 'r', encoding="utf8")
     lines = ids.readlines()
     count = 0
     for line in lines:
@@ -88,7 +88,7 @@ def downloadFiles(line, outputPath, count, totalCount):
                     gag_prefix + line + extensions[i], stream=True)
                 if r.status_code == 200:
                     r.raw.decode_content = True
-                    with open(outputPath+'/'+line+extensions[i], 'wb') as f:
+                    with open(outputPath+line+extensions[i], 'wb') as f:
                         shutil.copyfileobj(r.raw, f)
                     app.setMeter('progress', (count/totalCount)*100)
                     app.setStatusbar('Status : ['+str(count)+'/'+str(totalCount)+'] downloaded. Estimated '+ getEstimatedTime(count, totalCount), field=0)
@@ -120,7 +120,6 @@ def getEstimatedTime(count, totalCount):
 def countLines(inputPath):
     # Counting total amount of ids
     ids = open(inputPath, 'r')
-    print(ids)
     totalCount = 0
     for line in ids:
         if line != '\n':
@@ -129,7 +128,7 @@ def countLines(inputPath):
     return totalCount
 
 def convertFileToIdsList(inputPath):
-    with open(inputPath) as infile, open('upvotes.txt', 'w') as upvotes:
+    with open(inputPath, encoding="utf8") as infile, open('upvotes.txt', 'w', encoding="utf8") as upvotes:
         copy = False
         for line in infile:
             if line.strip() == '<h3>Upvotes</h3>':
@@ -143,14 +142,14 @@ def convertFileToIdsList(inputPath):
     upvotes.close()
     infile.close()
     
-    with open('upvotes.txt') as upvotes, open('urls.txt', 'w') as urls:
+    with open('upvotes.txt', encoding="utf8") as upvotes, open('urls.txt', 'w', encoding="utf8") as urls:
         for line in upvotes:
             if 'href' in line:
                 urls.write(line)
     upvotes.close()
     urls.close()
 
-    with open('urls.txt') as urls, open(generated_data_filename, 'w') as data:
+    with open('urls.txt', encoding="utf8") as urls, open(generated_data_filename, 'w', encoding="utf8") as data:
         for line in urls:
             data.write(line[46:53]+'\n')
     data.close()
