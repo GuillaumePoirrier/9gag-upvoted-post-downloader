@@ -49,5 +49,5 @@ Within minutes, you will receive a mail from 9gag. Download the file "You 9gag d
 
 That's all folks ! Your memes will be downloaded in the chosen directory. 
 **If you do not trust the file processing, feel free to remove the first part of the html file containing your pseudo and mail.** 
-I absolutly take any information from the users. Privacy first ! 
+I absolutely take no information from the users. Privacy first ! 
 
