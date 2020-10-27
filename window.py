@@ -43,7 +43,6 @@ def submit(button):
         outputPath+='/'
         runningMode()
         t0 = time.process_time()
-        print(t0)
         convertFileToIdsList(inputPath)
         app.thread(readIds, outputPath)
     else:
@@ -121,7 +120,6 @@ def getEstimatedTime(count, totalCount):
 def countLines(inputPath):
     # Counting total amount of ids
     ids = open(inputPath, 'r')
-    print(ids)
     totalCount = 0
     for line in ids:
         if line != '\n':
