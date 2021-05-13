@@ -1,3 +1,7 @@
+##
+# 9GAG prefix url
+##
+
 NINE_GAG_PREFIX = 'https://img-9gag-fun.9cache.com/photo/'
 
 
@@ -74,6 +78,7 @@ DOWNVOTES_SECTION = '<h3>Downvotes</h3>'
 ##
 # FILE PROCESSING STATUS
 ##
+
 STATUS_LABEL = 'Status'
 FINISHED_STATUS = 'finished'
 ALREADY_FOUD_STATUS = 'already found'
@@ -84,4 +89,5 @@ ELAPSED_TIME = ' elapsed time: '
 ##
 # ERROR MESSAGES
 ##
+
 WRONG_INPUTS = 'Please input your html file and select the output directory'
