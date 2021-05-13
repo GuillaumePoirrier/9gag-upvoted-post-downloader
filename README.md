@@ -17,12 +17,11 @@ You can either download the source and run
 
 ```
 pipenv install
-
 ```
 
 And then run 
 ```
-pyinstaller --onefile --windowed window.py
+pyinstaller --onefile --windowed main.py
 ```
 And execute the file window in /dist
 
