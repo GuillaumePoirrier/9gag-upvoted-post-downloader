@@ -6,8 +6,8 @@ This projects helps nostalgic 9gaggers retrieving and downloading old upvoted me
 ## Screenshots
 
 
-<img src="img/2020-10-27_12-30.png"/>
-<img src="img/2020-10-27_12-31.png"/>
+<img src="resources/img/2020-10-27_12-30.png"/>
+<img src="resources/img/2020-10-27_12-31.png"/>
 
 ## Execution
 
