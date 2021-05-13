@@ -16,11 +16,10 @@ This projects helps nostalgic 9gaggers retrieving and downloading old upvoted me
 You can either download the source and run
 
 ```
-pip3 install requests
-pip3 install appjar
-pip3 install datetime
-pip3 install pyinstaller
+pipenv install
+
 ```
+
 And then run 
 ```
 pyinstaller --onefile --windowed window.py
