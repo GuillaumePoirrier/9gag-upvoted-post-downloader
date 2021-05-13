@@ -3,8 +3,6 @@
 #   Do not hesitate to suggest improvements !   #
 #################################################
 
-
-from tkinter import constants
 from appJar import gui
 import requests
 import shutil
