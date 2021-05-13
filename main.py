@@ -24,8 +24,8 @@ import resources.const.constants as cst
 ##
 
 app = gui()
-running=True
-t0=0
+running = True
+t0 = 0
 
 def main():
     initApp()
@@ -84,7 +84,7 @@ def readIds(outputPath, data):
             break
 
 def downloadFiles(val, outputPath, count, totalCount):
-    found=False
+    found = False
     for i in range(0, len(cst.FILE_EXTENSIONS)):
         if found == False:
             if doesExist(val, outputPath) == False:
@@ -107,7 +107,7 @@ def downloadFiles(val, outputPath, count, totalCount):
                         + cst.ESTIMATED
                         + ' '
                         + getEstimatedTime(count, totalCount), field=0)
-                    found=True
+                    found = True
                 if count == totalCount:
                     app.setStatusbar(
                         '['+cst.FINISHED_STATUS+'] '
