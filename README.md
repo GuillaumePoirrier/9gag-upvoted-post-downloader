@@ -50,3 +50,6 @@ That's all folks ! Your memes will be downloaded in the chosen directory.
 **If you do not trust the file processing, feel free to remove the first part of the html file containing your pseudo and mail.** 
 I absolutely take no information from the users. Privacy first ! 
 
+### Advice needed
+By implementing pyinstaller in Pipfile, compiled version went from 10Mo to 88Mo, if you know how to reduce binary size, feel free to give your advice !
+
