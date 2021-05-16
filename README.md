@@ -51,5 +51,6 @@ That's all folks ! Your memes will be downloaded in the chosen directory.
 I absolutely take no information from the users. Privacy first ! 
 
 ### Advice needed
+
 By implementing pyinstaller in Pipfile, compiled version went from 10Mo to 88Mo, if you know how to reduce binary size, feel free to give your advice !
 

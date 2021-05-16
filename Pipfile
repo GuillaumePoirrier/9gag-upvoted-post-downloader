@@ -8,6 +8,8 @@ requests = "*"
 appjar = "*"
 datetime = "*"
 pyinstaller = "*"
+pandas = "*"
+lxml = "*"
 
 [dev-packages]
 pyinstaller = "*"
